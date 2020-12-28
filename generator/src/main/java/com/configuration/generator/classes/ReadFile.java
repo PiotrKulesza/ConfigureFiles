@@ -11,7 +11,7 @@ import java.util.Map;
 public class ReadFile {
 
     public Map<String,String> getProperties() throws IOException {
-        String filePath = "/home/"+System.getProperty("user.name")+"/printenv.log";
+        String filePath = "/home/ubuntu/printenv.log";
 
         Path path = FileSystems.getDefault().getPath(filePath);
         Map<String, String> map = new HashMap<String, String>();

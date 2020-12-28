@@ -12,9 +12,9 @@ public class WriteFile {
     public void writeProperites(Map<String,String> map) throws IOException {
 
         Writer fileWriter = new FileWriter(
-                "/home/"+System.getProperty("user.name")+"/ProjectRTMPSerwis/videoSerwis/src/main/resources/application.properties"
+                "/home/ubuntu/ProjectRTMPSerwis/videoSerwis/src/main/resources/application.properties"
                 , false);
-
+        System.out.println(System.getProperty("user.home")+"/ProjectRTMPSerwis/videoSerwis/src/main/resources/application.properties");
 
         fileWriter.write("spring.data.mongodb.database=projectdb\n");
         fileWriter.write("spring.data.mongodb.ip="+map.get("PUBLIC_ComponentDatabasePortReq")+"\n");
@@ -30,9 +30,8 @@ public class WriteFile {
 
     public void writeConfig(Map<String,String> map) throws IOException {
         Writer fileWriter = new FileWriter(
-                "/home/"+System.getProperty("user.name")+"/ProjectRTMPSerwis/videoSerwis/src/main/webapp/front/src/Components/config/config.json"
+                "/home/ubuntu/ProjectRTMPSerwis/videoSerwis/src/main/webapp/front/src/Components/config/config.json"
                 , false);
-        System.out.println(System.getProperty("user.name"));
 
         fileWriter.write("{\n");
         fileWriter.write("  \"ip\": \""+map.get("PUBLIC_IP")+"\"\n");
